@@ -1,7 +1,7 @@
 /* General styles for sidebar and toggle button */
 .cart-sidebar {
     position: fixed;
-    right: -100%;
+    right: -100%; 
     top: 0;
     width: 350px;
     height: 100%;
