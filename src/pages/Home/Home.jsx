@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import Category from '../../components/Category/Category'
 import MostLovingProduct from '../../components/ProductSection/MostLovingProduct'
@@ -10,11 +10,20 @@ import Testimonial from '../../components/Testimonial/Testimonial';
 import Blog from '../../components/Blog/Blog';
 
 const Home = () => {
+  
+  useEffect(() => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    })
+  }, []);
+
+
   return (
     <>
-      <Carasol/>
-      <Category/>
-      <MostLovingProduct/>
+      <Carasol />
+      <Category />
+      <MostLovingProduct />
 
       <section className='banners py-5' >
         <div className="container">
@@ -29,8 +38,8 @@ const Home = () => {
           </div>
         </div>
       </section>
-      <Testimonial/>
-      <Blog/>
+      <Testimonial />
+      <Blog />
     </>
   )
 }

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ProductPage.css'; // Import the CSS file for styling
 
@@ -112,6 +112,13 @@ const ProductPage = () => {
     const handleClosePopup = () => {
         setShowPopup(false);
     };
+
+    useEffect(()=>{
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        })
+    },[])
 
     return (
         <>
