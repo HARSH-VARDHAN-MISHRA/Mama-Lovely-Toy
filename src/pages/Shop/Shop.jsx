@@ -22,11 +22,19 @@ const Shop = () => {
         { productName: "Battery Operated Toy Car", productImage: pic7, actualPrice: "3500.00", discountPercentage: 15, offPrice: "2975.00" },
         { productName: "Interactive Learning Tablet", productImage: pic8, actualPrice: "1800.00", discountPercentage: 22, offPrice: "1404.00" },
         { productName: "Puzzle Mat", productImage: pic11, actualPrice: "900.00", discountPercentage: 10, offPrice: "810.00" },
-        { productName: "Baby Gym Play Mat", productImage: pic12, actualPrice: "1600.00", discountPercentage: 20, offPrice: "1280.00" }
+        { productName: "Baby Gym Play Mat", productImage: pic12, actualPrice: "1600.00", discountPercentage: 20, offPrice: "1280.00" },
+        { productName: "Musical Activity Walker", productImage: pic3, actualPrice: "2000.00", discountPercentage: 25, offPrice: "1500.00" },
+        { productName: "Educational Building Blocks", productImage: pic4, actualPrice: "800.00", discountPercentage: 20, offPrice: "640.00" },
+        { productName: "Stuffed Teddy Bear", productImage: pic5, actualPrice: "1000.00", discountPercentage: 30, offPrice: "700.00" },
+        { productName: "Wooden Rocking Horse", productImage: pic6, actualPrice: "2500.00", discountPercentage: 20, offPrice: "2000.00" },
+        { productName: "Battery Operated Toy Car", productImage: pic7, actualPrice: "3500.00", discountPercentage: 15, offPrice: "2975.00" },
+        { productName: "Interactive Learning Tablet", productImage: pic8, actualPrice: "1800.00", discountPercentage: 22, offPrice: "1404.00" },
+        { productName: "Puzzle Mat", productImage: pic11, actualPrice: "900.00", discountPercentage: 10, offPrice: "810.00" },
+        { productName: "Baby Gym Play Mat", productImage: pic12, actualPrice: "1600.00", discountPercentage: 20, offPrice: "1280.00" },
     ];
 
     const [currentPage, setCurrentPage] = useState(1);
-    const [productsPerPage] = useState(6); // 6 products per page
+    const [productsPerPage] = useState(12); // 6 products per page
     const [showFilter, setShowFilter] = useState(false);
 
     useEffect(() => {
@@ -102,7 +110,7 @@ const Shop = () => {
                             <div key={index} className="product-card">
                                 <img src={product.productImage} alt={product.productName} />
                                 <h3>{product.productName}</h3>
-                                <p className="price"><span className="actual-price">₹{product.actualPrice}</span> ₹{product.offPrice}</p>
+                                <p className="price">₹{product.offPrice} <span className="actual-price">₹{product.actualPrice}</span> </p>
                                 <p className="discount">{product.discountPercentage}% Off</p>
                             </div>
                         ))}

@@ -7,15 +7,15 @@
 .shop-container .filter-toggle-btn {
     display: none;
     position: fixed;
-    bottom: 20px;
-    left: 20px;
-    padding: 10px 20px;
+    bottom: 5rem;
+    padding: 6px 15px;
     background: var(--color-orange);
     color: #fff;
     border: none;
     border-radius: 5px;
+    left: 33%;
     cursor: pointer;
-    z-index: 1000;
+    z-index: 1200;
     transition: background var(--transition-3);
 }
 
@@ -92,7 +92,6 @@
 .shop-container .product-card {
     background: #fff;
     border-radius: 10px;
-    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
     border: 1px solid var(--color-fairy-tale);
     padding: 15px;
     text-align: center;
@@ -104,7 +103,7 @@
     width: 100%;
     height: 16rem;
     object-fit: contain;
-    border-bottom: 1px solid var(--border-color-1);
+    border-bottom: 1px solid var(--color-thistle);
     margin-bottom: 10px;
 }
 
@@ -116,7 +115,7 @@
 }
 
 .shop-container .price {
-    font-size: 1rem;
+    font-size: 1.5rem;
     margin-bottom: 5px;
     color: var(--color-marron);
 }
@@ -125,6 +124,7 @@
     text-decoration: line-through;
     margin-right: 5px;
     color: var(--color-marron);
+    font-size: 1rem;
 }
 
 .shop-container .discount {
@@ -135,20 +135,7 @@
     position: absolute;
     right: 0;
     top: 4%;
-}
-
-.shop-container .product-card .btn {
-    padding: 10px 20px;
-    background: var(--color-orange);
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background var(--transition-3);
-}
-
-.shop-container .product-card .btn:hover {
-    background: var(--color-button-hover);
+    color: var(--color-blue-dark);
 }
 
 .shop-container .pagination {
@@ -179,6 +166,9 @@
     .shop-container .products-grid {
         grid-template-columns: repeat(2, 1fr);
     }
+    .shop-container .product-card img {
+        height: 12rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -198,14 +188,17 @@
         width: 100%;
         position: fixed;
         top: 0;
-        right: 0;
+        right: 0px;
         height: 100%;
-        transform: translateX(100%);
+        transform: translateX(120%);
         z-index: 1000;
     }
 
     .shop-container .filter-section.show {
+        width: 90%;
         transform: translateX(0);
+        left: 5%;
+        /* top: 6rem; */
     }
 
     .shop-container .filter-section.hide {
@@ -213,7 +206,6 @@
     }
 
     .shop-container .products-section {
-        margin-top: 80px;
-        /* Adjust according to filter button height */
+        margin-top: 20px;
     }
 }
