@@ -149,10 +149,10 @@ const Header = () => {
           <Link to="/"><i className="fas fa-home"></i></Link>
           <span>Home</span>
         </div>
-        <div className={`nav-item ${activeTab === 'search' ? 'active' : ''}`} onClick={() => setActiveTab('search')}>
+        {/* <div className={`nav-item ${activeTab === 'search' ? 'active' : ''}`} onClick={() => setActiveTab('search')}>
           <Link to="/search"><i className="fas fa-search"></i></Link>
           <span>Search</span>
-        </div>
+        </div> */}
         <div className={`nav-item ${activeTab === 'shop' ? 'active' : ''}`} onClick={() => setActiveTab('shop')}>
           <Link to="/shop"><i className="fa-solid fa-store"></i></Link>
           <span>Shop</span>
