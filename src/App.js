@@ -9,6 +9,7 @@ import AboutPage from './pages/AboutPage/AboutPage';
 import ProductPage from './pages/ProductPage/ProductPage';
 import Shop from './pages/Shop/Shop';
 import ProductByCategory from './pages/ProductPage/ProductByCategory';
+import BlogPage from './pages/BlogPage/BlogPage';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/single-product' element={<ProductPage/>} />
         <Route path='/shop' element={<Shop/>} />
         <Route path='/category/products' element={<ProductByCategory/>} />
+        <Route path='/blog' element={<BlogPage/>} />
       </Routes>
       <Footer/>
     </>
