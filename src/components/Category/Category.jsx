@@ -77,7 +77,7 @@ const Category = () => {
                 <div className="row">
                     <div className="grid-3">
                         {categories && categories.map((category,index)=>(
-                            <Link className="single-category" key={index}  style={{ backgroundImage: `url(${category.imageUrl})` }}>
+                            <Link to={`/category/products`} className="single-category" key={index}  style={{ backgroundImage: `url(${category.imageUrl})` }}>
                                 <div className="content">
                                     <h3>{category.categoryName}</h3>
                                     <button>Shop Now</button>

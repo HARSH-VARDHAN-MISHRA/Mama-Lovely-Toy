@@ -32,12 +32,22 @@ body {
     --bg-yellow: #fefaed;
 
 
-    --linear-gradient: linear-gradient(135deg, #ffafcc, #fefaed);
+    --linear-gradient-1: linear-gradient(135deg, #ffafcc, #fefaed);
+    --linear-gradient: linear-gradient(135deg, var(--color-light-sky-blue), #81d8df);
     --border-color-1: rgba(101, 119, 134, 0.36);
     --transition-3: all 300ms ease-in;
     --transition-4: all 400ms ease-in;
     --color-blue-dark: #003873;
     --color-button-hover: #ffafcc;
+
+    --gradient-thistle-fairy-tale: linear-gradient(45deg, var(--color-thistle), var(--color-fairy-tale));
+    --gradient-carnation-pink-uranian-blue: linear-gradient(45deg, var(--color-carnation-pink), var(--color-uranian-blue));
+    --gradient-light-sky-blue-pink: linear-gradient(45deg, var(--color-light-sky-blue), var(--color-pink));
+    --gradient-pink-light-blue: linear-gradient(45deg, var(--color-pink), var(--color-light-blue));
+    --gradient-parrot-orange: linear-gradient(45deg, var(--color-parrot), var(--color-orange));
+    --gradient-marron-thistle: linear-gradient(45deg, var(--color-marron), var(--color-thistle));
+    --gradient-blue-light-blue: linear-gradient(45deg, var(--color-blue), var(--color-light-blue));
+
 
     --font-family--poppins: "Poppins", sans-serif;
 }
@@ -125,8 +135,9 @@ img {
     text-align: center;
 }
 
-.bread .breadcrumb{
+.bread .breadcrumb {
     justify-content: center;
+    align-items: center;
 }
 
 

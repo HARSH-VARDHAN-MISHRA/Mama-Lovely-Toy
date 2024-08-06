@@ -1,6 +1,6 @@
 /* Newsletter Section */
 .newsletter-section {
-    background-color: #00AAA9;
+    background-color: var(--bg-yellow);
     color: #fff;
     padding: 40px 20px;
     

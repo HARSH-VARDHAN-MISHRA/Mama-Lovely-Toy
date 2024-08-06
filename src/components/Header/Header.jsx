@@ -58,7 +58,7 @@ const Header = () => {
               <ul>
                 <li><Link to="/">Home</Link></li>
                 <li className="dropdown">
-                  <Link to="/products">Products</Link>
+                  <Link to="/shop">Products</Link>
                   <ul className="dropdown-menu">
                     <li><Link to="/category/products">Baby Toys</Link></li>
                     <li><Link to="/category/products">Teddy Bear</Link></li>
@@ -114,11 +114,11 @@ const Header = () => {
               </button>
               {isDropdownOpen && (
                 <ul className="dropdown-menu">
-                  <li><Link to="/products/baby-toys">Baby Toys</Link></li>
-                  <li><Link to="/products/teddy-bear">Teddy Bear</Link></li>
-                  <li><Link to="/products/carry-cot">Carry Cot</Link></li>
-                  <li><Link to="/products/riders">Riders</Link></li>
-                  <li><Link to="/products/baby-cars">Baby Cars</Link></li>
+                  <li><Link to="/category/products">Baby Toys</Link></li>
+                  <li><Link to="/category/products">Teddy Bear</Link></li>
+                  <li><Link to="/category/products">Carry Cot</Link></li>
+                  <li><Link to="/category/products">Riders</Link></li>
+                  <li><Link to="/category/products">Baby Cars</Link></li>
                 </ul>
               )}
             </li>
