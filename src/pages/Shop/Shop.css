@@ -97,6 +97,8 @@
     text-align: center;
     transition: box-shadow var(--transition-3);
     position: relative;
+    color: inherit;
+    text-decoration: none;
 }
 
 .shop-container .product-card img {

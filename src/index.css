@@ -127,6 +127,7 @@ img {
 }
 
 
+
 /* ------ BreadCrumb -----  */
 .bread {
     padding: 3rem 0rem;
@@ -332,4 +333,18 @@ img {
 
 .sin-product .addToCart:hover {
     background-color: #444;
+}
+
+@media only screen and (max-width: 420px){
+    .grid-5 {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.5rem;
+    }
+    .sin-product .absolute-items .openModal {
+        display: none;
+    }
+    .sin-product .offPercent {
+        font-size: 0.7rem;
+    }
 }

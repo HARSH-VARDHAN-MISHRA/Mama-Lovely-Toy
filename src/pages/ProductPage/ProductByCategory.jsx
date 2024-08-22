@@ -9,7 +9,7 @@ import pic7 from '../../Assets/Picture7.png';
 import pic8 from '../../Assets/Picture8.png';
 import pic11 from '../../Assets/Picture11.png';
 import pic12 from '../../Assets/Picture12.png';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 const ProductByCategory = () => {
 
@@ -67,12 +67,12 @@ const ProductByCategory = () => {
                     <div className="products-section">
                         <div className="products-grid">
                             {ShopProducts.slice(0, displayedProducts).map((product, index) => (
-                                <div key={index} className="product-card">
+                                <Link key={index} to={`/single-product`} className="product-card">
                                     <img src={product.productImage} alt={product.productName} />
                                     <h3>{product.productName}</h3>
                                     <p className="price">₹{product.offPrice} <span className="actual-price">₹{product.actualPrice}</span></p>
                                     <p className="discount">{product.discountPercentage}% Off</p>
-                                </div>
+                                </Link>
                             ))}
                         </div>
                         {loading && <div className="loader"></div>}
