@@ -5,3 +5,6 @@
     content: 'next';
     font-size: 2rem !important;
 }
+.swiper-pagination-fraction, .swiper-pagination-custom, .swiper-horizontal > .swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: var(--swiper-pagination-bottom, -6px) !important;
+}

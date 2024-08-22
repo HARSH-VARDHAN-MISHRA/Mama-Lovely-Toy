@@ -77,6 +77,7 @@ const Category = () => {
                     </div>
                     <div className="row">
                         <Swiper
+                            modules={[Autoplay, Navigation, Pagination]}
                             spaceBetween={30}
                             slidesPerView={3}
                             loop={true}
