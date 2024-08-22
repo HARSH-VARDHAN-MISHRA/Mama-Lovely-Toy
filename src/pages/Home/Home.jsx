@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Category from '../../components/Category/Category'
 import MostLovingProduct from '../../components/ProductSection/MostLovingProduct'
@@ -9,8 +9,14 @@ import Carasol from '../../components/Carasol/Carasol';
 import Testimonial from '../../components/Testimonial/Testimonial';
 import Blog from '../../components/Blog/Blog';
 
+import bn1 from '../../Assets/bn1.png';
+import bn2 from '../../Assets/bn2.png';
+import bn3 from '../../Assets/bn3.png';
+import bn4 from '../../Assets/bn4.png';
+// import { Link } from 'react-router-dom';
+
 const Home = () => {
-  
+
   useEffect(() => {
     window.scrollTo({
       top: 0,
@@ -18,10 +24,91 @@ const Home = () => {
     })
   }, []);
 
+  const [showAll, setShowAll] = useState(false); // State to toggle view
+
+  const categories = [
+    {
+      id: 1,
+      categoryName: "Baby Toys",
+      imageUrl: bn1
+    },
+    {
+      id: 2,
+      categoryName: "Teddy Bear",
+      imageUrl: bn2
+    },
+    {
+      id: 3,
+      categoryName: "Carry Cot",
+      imageUrl: bn3
+    },
+    {
+      id: 4,
+      categoryName: "Riders",
+      imageUrl: bn4
+    },
+    {
+      id: 5,
+      categoryName: "Baby Cars",
+      imageUrl: bn3
+    },
+    {
+      id: 1,
+      categoryName: "Baby Toys",
+      imageUrl: bn1
+    },
+    {
+      id: 2,
+      categoryName: "Teddy Bear",
+      imageUrl: bn2
+    },
+    {
+      id: 3,
+      categoryName: "Carry Cot",
+      imageUrl: bn3
+    },
+  ];
+
+  const visibleCategories = showAll ? categories : categories.slice(0, 6);
+
+
 
   return (
     <>
       <Carasol />
+
+      <section className='my-5 category'>
+        <div className="container">
+          <div className="row head">
+            <div className="col-md-12 text-center">
+              <h2>Our Category</h2>
+            </div>
+          </div>
+
+          <div className="category-grid">
+            {visibleCategories.map((category, index) => (
+              <Link
+                to={`/category/products`}
+                className="main-category"
+                key={index}
+                style={{ backgroundImage: `url(${category.imageUrl})` }}
+              >
+                <div className="content">
+                  <h3>{category.categoryName}</h3>
+                </div>
+              </Link>
+            ))}
+          </div>
+
+          <div className="text-center view-more-container mt-3">
+            <button className="viewMoreBtn" onClick={() => setShowAll(!showAll)}>
+              {showAll ? 'View Less' : 'View More'}
+            </button>
+          </div>
+
+        </div>
+      </section>
+
       <Category />
       <MostLovingProduct />
 

@@ -6,7 +6,7 @@ import 'swiper/css/pagination';
 import './styles.css';
 
 // import required modules
-import { Pagination ,Navigation } from 'swiper/modules';
+import { Autoplay, Navigation, Pagination } from 'swiper/modules';
 import axios from 'axios';
 import banner1 from './banner1.jpg'
 import banner2 from './banner2.jpg'
@@ -42,14 +42,16 @@ const Carasol = () => {
   return (
     <>
         <Swiper
+            modules={[Autoplay, Navigation, Pagination]}
             slidesPerView={1}
             spaceBetween={30}
             loop={true}
-            pagination={{
-              clickable: true,
+            pagination={{ clickable: true }}
+            autoplay={{
+                delay: 2000,
+                disableOnInteraction: false,
             }}
             navigation={true}
-            modules={[Pagination, Navigation]}
             className="mySwiper"
         >
             {
