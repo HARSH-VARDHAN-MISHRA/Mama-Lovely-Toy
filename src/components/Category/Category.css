@@ -3,8 +3,7 @@
     border-radius: 8px;
     background-position: center center;
     background-repeat: no-repeat;
-    background-size: 100%;
-    
+    background-size: cover;
     min-height: 240px;
     text-decoration: none;
     color: white;
@@ -62,3 +61,14 @@
 }
 
 
+@media only screen and (max-width: 550px){
+    .single-category h3 {
+        font-size: 1rem;
+    }
+    .single-category button {
+        font-size: 0.8rem;
+    }
+    .single-category {
+        min-height: 180px;
+    }
+}
