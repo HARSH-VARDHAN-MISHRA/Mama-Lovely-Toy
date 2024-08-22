@@ -12,6 +12,7 @@ import ProductByCategory from './pages/ProductPage/ProductByCategory';
 import BlogPage from './pages/BlogPage/BlogPage';
 import SupportPage from './pages/SupportPage/SupportPage';
 import Login from './components/Auth/Login';
+import CategoryPage from './pages/CategoryPage/CategoryPage';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/about' element={<AboutPage/>} />
         <Route path='/single-product' element={<ProductPage/>} />
         <Route path='/shop' element={<Shop/>} />
+        <Route path='/our-category' element={<CategoryPage/>} />
         <Route path='/category/products' element={<ProductByCategory/>} />
         <Route path='/blog' element={<BlogPage/>} />
         <Route path='/contact' element={<SupportPage/>} />

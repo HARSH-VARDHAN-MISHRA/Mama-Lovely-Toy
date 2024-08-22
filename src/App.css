@@ -1,0 +1,7 @@
+.swiper-button-prev, .swiper-button-next {
+    color: var(--color-thistle, var(--color-thistle)) !important;
+}
+.swiper-button-next:after, .swiper-rtl .swiper-button-prev:after {
+    content: 'next';
+    font-size: 2rem !important;
+}

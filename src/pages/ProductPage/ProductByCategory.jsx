@@ -9,7 +9,7 @@ import pic7 from '../../Assets/Picture7.png';
 import pic8 from '../../Assets/Picture8.png';
 import pic11 from '../../Assets/Picture11.png';
 import pic12 from '../../Assets/Picture12.png';
-import { Link, NavLink } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const ProductByCategory = () => {
 
