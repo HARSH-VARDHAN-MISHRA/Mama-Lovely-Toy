@@ -75,7 +75,8 @@ const Header = () => {
             <div className="header-right">
               <div className="user-actions">
                 <Link to="/profile"><i className="fas fa-user"></i></Link>
-                <Link  className="cart-icon" onClick={handleCartClick}>
+                {/* <Link  className="cart-icon" onClick={handleCartClick}> */}
+                <Link  className="cart-icon" to={`/cart`}>
                   <i className="fas fa-shopping-cart"></i>
                   {cartNumber > 0 && <span className="cart-number">{cartNumber}</span>}
                 </Link>
@@ -157,8 +158,9 @@ const Header = () => {
           <Link to="/shop"><i className="fa-solid fa-store"></i></Link>
           <span>Shop</span>
         </div>
-        <div className={`nav-item ${activeTab === 'cart' ? 'active' : ''}`}  onClick={handleCartClick}>
-          <Link to="#"><i className="fa-solid fa-basket-shopping"></i></Link>
+        {/* <div className={`nav-item ${activeTab === 'cart' ? 'active' : ''}`}  onClick={handleCartClick}> */}
+        <div className={`nav-item ${activeTab === 'cart' ? 'active' : ''}`}  onClick={() => setActiveTab('shop')}>
+          <Link to="/cart"><i className="fa-solid fa-basket-shopping"></i></Link>
           <span>Cart</span>
         </div>
         {isLoggedIn ? (
