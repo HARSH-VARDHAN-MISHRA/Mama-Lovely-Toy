@@ -2,27 +2,31 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CartPage.css';
 
+import pic5 from '../../Assets/Picture5.png';
+import pic6 from '../../Assets/Picture6.jpg';
+import pic7 from '../../Assets/Picture7.png';
+
 const CartPage = () => {
     const [cartItems, setCartItems] = useState([
         {
             id: 1,
             name: "Teddy Bear",
-            imageUrl: "https://via.placeholder.com/150",
-            price: 20.00,
+            imageUrl: pic5,
+            price: 2000, // Use INR instead of USD
             quantity: 1
         },
         {
             id: 2,
             name: "Baby Car",
-            imageUrl: "https://via.placeholder.com/150",
-            price: 35.00,
+            imageUrl: pic6,
+            price: 3500,
             quantity: 2
         },
         {
             id: 3,
             name: "Building Blocks",
-            imageUrl: "https://via.placeholder.com/150",
-            price: 15.00,
+            imageUrl: pic7,
+            price: 1500,
             quantity: 1
         }
     ]);
@@ -41,10 +45,10 @@ const CartPage = () => {
 
     return (
         <>
-            <section className="breadcrumb-section">
+            <section className="bread">
                 <div className="container">
                     <nav aria-label="breadcrumb">
-                        <h1>Cart</h1>
+                        <h1>Your Cart</h1>
                         <ol className="breadcrumb">
                             <li className="breadcrumb-item"><Link to="/">Home</Link></li>
                             <li className="breadcrumb-item active" aria-current="page">Cart</li>
@@ -53,44 +57,52 @@ const CartPage = () => {
                 </div>
             </section>
 
-            <section className="cart-section py-5">
+            <section className="cart-page py-5">
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-8">
-                            <h2 className="cart-title">Your Cart</h2>
-                            {cartItems.length === 0 ? (
-                                <p className="empty-cart-message">Your cart is empty.</p>
-                            ) : (
-                                <div className="cart-items">
-                                    {cartItems.map(item => (
-                                        <div className="cart-item" key={item.id}>
-                                            <img src={item.imageUrl} alt={item.name} className="item-image" />
-                                            <div className="item-details">
-                                                <h4>{item.name}</h4>
-                                                <p>Price: ${item.price.toFixed(2)}</p>
-                                                <div className="quantity-control">
-                                                    <button onClick={() => handleQuantityChange(item.id, -1)} disabled={item.quantity === 1}>-</button>
-                                                    <span>{item.quantity}</span>
-                                                    <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
+                        {cartItems.length === 0 ? (
+                            <p className="empty-cart-message">Your cart is empty.</p>
+
+                        ) : (
+
+                            <>
+                                <div className="col-md-8 mb-4">
+                                    <div className="cart-items">
+                                        {cartItems.map(item => (
+                                            <div className="cart-item" key={item.id}>
+                                                <img src={item.imageUrl} alt={item.name} className="cart-item-image" />
+                                                <div className="cart-item-details">
+                                                    <h4 className='mb-0 flex-wrap'>{item.name}</h4>
+                                                    <p className="item-price">Price: ₹{item.price.toLocaleString()}</p>
+                                                    <div className="quantity-control">
+                                                        <button onClick={() => handleQuantityChange(item.id, -1)} disabled={item.quantity === 1}>-</button>
+                                                        <span>{item.quantity}</span>
+                                                        <button onClick={() => handleQuantityChange(item.id, 1)}>+</button>
+                                                    </div>
+                                                    <button className="remove-btn" onClick={() => handleRemoveItem(item.id)}>Remove</button>
                                                 </div>
-                                                <button className="remove-btn" onClick={() => handleRemoveItem(item.id)}>Remove</button>
+                                                {/* <div className="cart-item-total">
+                                                    <p>Total: ₹{(item.price * item.quantity).toLocaleString()}</p>
+                                                </div> */}
                                             </div>
-                                            <div className="item-total">
-                                                <p>Total: ${(item.price * item.quantity).toFixed(2)}</p>
-                                            </div>
-                                        </div>
-                                    ))}
+                                        ))}
+                                    </div>
                                 </div>
-                            )}
-                        </div>
-                        <div className="col-md-4">
-                            <div className="cart-summary">
-                                <h2>Summary</h2>
-                                <p>Total Items: {cartItems.length}</p>
-                                <p>Total Price: ${totalPrice.toFixed(2)}</p>
-                                <Link to="/checkout" className="checkout-btn">Proceed to Checkout</Link>
-                            </div>
-                        </div>
+
+                                <div className="col-md-4">
+                                    <div className="cart-summary">
+                                        <h2>Summary</h2>
+                                        <p  className="d-flex justify-content-between align-items-center">Total Items: <span>{cartItems.length} Items</span></p>
+                                        <p  className="d-flex justify-content-between align-items-center">Total Price: <span>₹{totalPrice.toLocaleString()}</span></p>
+                                        <div className="coupon-section">
+                                            <input type="text" placeholder="Enter coupon code" />
+                                            <button className="apply-coupon-btn">Apply Coupon</button>
+                                        </div>
+                                        <Link to="/checkout" className="checkout-btn">Proceed to Checkout</Link>
+                                    </div>
+                                </div>
+                            </>
+                        )}
                     </div>
                 </div>
             </section>
