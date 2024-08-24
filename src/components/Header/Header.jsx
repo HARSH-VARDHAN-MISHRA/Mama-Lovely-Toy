@@ -192,6 +192,10 @@ const Header = () => {
         </div>
       </section>
 
+      {/* <!-- ----------Whatsapp---------- --> */}
+      <a href="https://api.whatsapp.com/send?phone=919800930045" target="_blank" class="whatsapp_float"><i class="fa-brands fa-whatsapp whatsapp-icon"></i></a>
+
+
       <CartSidebar isOpen={isCartOpen} toggleSidebar={toggleSidebar} />
 
     </>
