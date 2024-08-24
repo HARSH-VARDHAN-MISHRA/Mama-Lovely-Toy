@@ -5,6 +5,7 @@ import './CartPage.css';
 import pic5 from '../../Assets/Picture5.png';
 import pic6 from '../../Assets/Picture6.jpg';
 import pic7 from '../../Assets/Picture7.png';
+import cartGif from './shopping-cart.gif'
 
 const CartPage = () => {
 
@@ -68,7 +69,17 @@ const CartPage = () => {
                 <div className="container">
                     <div className="row">
                         {cartItems.length === 0 ? (
-                            <p className="empty-cart-message">Your cart is empty.</p>
+                            <div className="col-md-6 blank-cart mx-auto text-center">
+                                <div className="row">
+                                    <div className="col-md-6 mx-auto text-center">
+                                        <img src={cartGif} alt="Cart Gif" />
+                                    </div>
+                                </div>
+                                <h4>Your cart is empty.</h4>
+                                <div className='view-more-container '>
+                                    <Link to={`/`} className='viewMoreBtn'>Add Item <i class="fa-solid fa-plus"></i></Link>
+                                </div>
+                            </div>
 
                         ) : (
 
