@@ -16,6 +16,7 @@ import CategoryPage from './pages/CategoryPage/CategoryPage';
 import CartPage from './pages/CartPage/CartPage';
 import Checkout from './pages/CartPage/Checkout';
 import ConfirmOrder from './pages/CartPage/ConfirmOrder';
+import Profile from './pages/Profile/Profile';
 
 function App() {
   return (
@@ -37,6 +38,7 @@ function App() {
 
         {/* ==== Authentication ====  */}
         <Route path='/login' element={<Login/>} />
+        <Route path='/profile' element={<Profile/>} />
       </Routes>
       <Footer/>
     </>
