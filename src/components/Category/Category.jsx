@@ -98,7 +98,7 @@ const Category = () => {
                                     <Link to={`/category/products`} className="single-category" style={{ backgroundImage: `url(${category.imageUrl})` }}>
                                         <div className="content">
                                             <h3>{category.categoryName}</h3>
-                                            <button>Shop Now</button>
+                                            {/* <button>Shop Now</button> */}
                                         </div>
                                     </Link>
                                 </SwiperSlide>

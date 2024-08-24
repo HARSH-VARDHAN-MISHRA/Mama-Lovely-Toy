@@ -14,6 +14,8 @@ import SupportPage from './pages/SupportPage/SupportPage';
 import Login from './components/Auth/Login';
 import CategoryPage from './pages/CategoryPage/CategoryPage';
 import CartPage from './pages/CartPage/CartPage';
+import Checkout from './pages/CartPage/Checkout';
+import ConfirmOrder from './pages/CartPage/ConfirmOrder';
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
         <Route path='/cart' element={<CartPage/>} />
         <Route path='/blog' element={<BlogPage/>} />
         <Route path='/contact' element={<SupportPage/>} />
+        <Route path='/checkout' element={<Checkout/>} />
+        <Route path='/order-confirm' element={<ConfirmOrder/>} />
 
         {/* ==== Authentication ====  */}
         <Route path='/login' element={<Login/>} />

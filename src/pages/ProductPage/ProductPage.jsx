@@ -178,7 +178,7 @@ const ProductPage = () => {
 
                     <div className="related-products">
                         <h2>Related Products</h2>
-                        <div className="grid-4 product-section">
+                        <div className="grid-5   product-section">
                         {relatedProducts && relatedProducts.map((product, index) => (
                             <Link to={`/single-product`} className="sin-product" key={index}>
                                 <div className="img">

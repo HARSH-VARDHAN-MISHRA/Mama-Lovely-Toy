@@ -20,7 +20,8 @@
     padding: 0.5rem;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
+    /* justify-content: space-between; */
     /* background-color: var(--color-thistle); */
     background: #cdb4db4d;
     border-radius: 10px;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import './CartPage.css';
 
@@ -7,6 +7,13 @@ import pic6 from '../../Assets/Picture6.jpg';
 import pic7 from '../../Assets/Picture7.png';
 
 const CartPage = () => {
+
+    useEffect(()=>{
+        window.scrollTo({
+            top:0,
+            behavior:'smooth'
+        })
+    },[])
     const [cartItems, setCartItems] = useState([
         {
             id: 1,
